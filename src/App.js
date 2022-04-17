@@ -42,26 +42,20 @@ function App() {
           <div className="main-screen"></div>
 
           <div className="screens">
-            {showFeatureOne ? (
-              <div className="feature-screen">
-                <span className="feature-box"></span>
-                <span className="feature-title">F1</span>
-              </div>
-            ) : null}
+            <div className={`feature-screen ${!showFeatureOne ? "hide" : ""}`}>
+              <span className="feature-box"></span>
+              <span className="feature-title">F1</span>
+            </div>
 
-            {showFeatureTwo ? (
-              <div className="feature-screen">
-                <span className="feature-box"></span>
-                <span className="feature-title">F2</span>
-              </div>
-            ) : null}
+            <div className={`feature-screen ${!showFeatureTwo ? "hide" : ""}`}>
+              <span className="feature-box"></span>
+              <span className="feature-title">F2</span>
+            </div>
 
-            {showFeatureThree ? (
-              <div className="feature-screen">
-                <span className="feature-box"></span>
-                <span className="feature-title">F3</span>
-              </div>
-            ) : null}
+            <div className={`feature-screen ${!showFeatureThree ? "hide" : ""}`}>
+              <span className="feature-box"></span>
+              <span className="feature-title">F3</span>
+            </div>
           </div>
         </div>
       </main>

@@ -57,9 +57,15 @@ main {
     justify-content: space-around;
     margin-top: 30px;
 }
+
 .feature-screen {
     display: flex;
     flex-direction: column;
+}
+
+
+.feature-screen.hide {
+  visibility: hidden;
 }
 
 .feature-box {
