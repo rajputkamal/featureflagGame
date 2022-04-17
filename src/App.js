@@ -1,23 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/style.css";
+import "antd/dist/antd.css";
+import { Switch } from "antd";
+import { useState } from "react";
 
 function App() {
+  const [showFeatureOne, setShowFeatureOne] = useState(true);
+  const [showFeatureTwo, setShowFeatureTwo] = useState(true);
+  const [showFeatureThree, setShowFeatureThree] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Toggle feature</h1>
+
+      <main>
+        <div className="features">
+          <div className="features_content">
+            <h3>Feature 1</h3>
+            <Switch
+              defaultChecked
+              onClick={() => setShowFeatureOne(!showFeatureOne)}
+            />
+          </div>
+          <div className="features_content">
+            <h3>Feature 2</h3>
+            <Switch
+              defaultChecked
+              onClick={() => setShowFeatureTwo(!showFeatureTwo)}
+            />
+          </div>
+          <div className="features_content">
+            <h3>Feature 3</h3>
+            <Switch
+              defaultChecked
+              onClick={() => setShowFeatureThree(!showFeatureThree)}
+            />
+          </div>
+        </div>
+
+        {/* //Main screen section */}
+        <div className="screen">
+          <div className="main-screen"></div>
+
+          <div className="screens">
+            {showFeatureOne ? (
+              <div className="feature-screen">
+                <span className="feature-box"></span>
+                <span className="feature-title">F1</span>
+              </div>
+            ) : null}
+
+            {showFeatureTwo ? (
+              <div className="feature-screen">
+                <span className="feature-box"></span>
+                <span className="feature-title">F2</span>
+              </div>
+            ) : null}
+
+            {showFeatureThree ? (
+              <div className="feature-screen">
+                <span className="feature-box"></span>
+                <span className="feature-title">F3</span>
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </main>
     </div>
   );
 }

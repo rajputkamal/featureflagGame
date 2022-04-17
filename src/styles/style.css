@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+.app h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+main {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-content auto;
+}
+
+.features {
+  grid-column: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features_content h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.screen {
+  background-color: #C4C4C4;
+  grid-column: 4 / 12 ;
+  height: 600px;
+}
+
+.main-screen {
+    background-color: #F508C1;
+    grid-column: 2 / -1 ;
+    height: 200px;
+    margin: 10px 10px;
+}
+.screens {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.feature-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-box {
+    background-color: red;
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+}
+
+.feature-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 10px;
+}
